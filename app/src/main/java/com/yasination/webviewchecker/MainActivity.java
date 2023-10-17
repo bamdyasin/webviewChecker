@@ -60,25 +60,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Home", Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
 
-                } else if (item.getItemId() == R.id.blogger) {
-                    navItem( "https://www.brandingdone.com");
-                    Toast.makeText(MainActivity.this, "Welcome to Blogger Website", Toast.LENGTH_SHORT).show();
-                    drawerLayout.closeDrawer(GravityCompat.START);
                 }
-                else if (item.getItemId() == R.id.travel) {
-                    navItem( "https://www.obokash.com/");
-                    Toast.makeText(MainActivity.this, "Welcome to Traveling Website", Toast.LENGTH_SHORT).show();
-                    drawerLayout.closeDrawer(GravityCompat.START);
-
-                }
-                else if (item.getItemId() == R.id.ecommerce) {
-                    Toast.makeText(MainActivity.this, "Welcome to e-Commerce Website", Toast.LENGTH_SHORT).show();
-                    navItem( "https://www.bdstall.com");
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                }
-                else if (item.getItemId() == R.id.ecommerce2) {
-                    navItem( "https://www.startech.com.bd/");
-                    Toast.makeText(MainActivity.this, "Welcome to e-Commerce Website", Toast.LENGTH_SHORT).show();
+                else if (item.getItemId()== R.id.price){
+                    Toast.makeText(MainActivity.this, "See Our App Price", Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
 
                 }

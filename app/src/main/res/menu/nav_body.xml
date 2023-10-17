@@ -5,7 +5,6 @@
     >
     <group
         android:id="@+id/navGroup">
-
         <item
             android:id="@+id/home"
             android:title="HOME"
@@ -13,36 +12,43 @@
             android:checkable="true"
             />
     </group>
+
+    <group
+        android:id="@+id/navPriceGroup">
     <item
-        android:id="@+id/ecommerce2"
-        android:title="Demo e-Commerce 1"
-        android:icon="@drawable/baseline_add_business_24"
+        android:id="@+id/price"
+        android:title="Buy Apps"
+        android:icon="@drawable/baseline_sell_24"
+        android:checkable="true"
+
+        />
+    </group>
+
+    <item
+        android:id="@+id/rateUs"
+        android:title="Rate Us"
+        android:icon="@drawable/baseline_star_rate_24"
         android:checkable="true"
 
         />
 
     <item
-        android:id="@+id/ecommerce"
-        android:title="Demo e-Commerce 2"
-        android:icon="@drawable/baseline_add_business_24"
+        android:id="@+id/share"
+        android:title="Share App"
+        android:icon="@drawable/baseline_share_24"
         android:checkable="true"
 
-        />
-
-
-    <item
-        android:id="@+id/blogger"
-        android:title="Demo Blogger "
-        android:icon="@drawable/baseline_text_snippet_24"
-        android:checkable="true"
         />
 
     <item
-        android:id="@+id/travel"
-        android:title="Demo Traver Agency "
-        android:icon="@drawable/baseline_mode_of_travel_24"
+        android:id="@+id/policy"
+        android:title="Privacy &amp; Policy"
+        android:icon="@drawable/baseline_privacy_tip_24"
         android:checkable="true"
+
         />
+
+
 
 
 
