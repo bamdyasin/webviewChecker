@@ -117,9 +117,10 @@ public class MainActivity extends AppCompatActivity {
                 else if (userLink.contains("www.")){
                     validURL =  userLink.split("www.")[1];
                 }else validURL = userLink;
+
+
                 webtoapp.webURL = "https://www."+validURL;
 
- //======================================================
                 DemoSplash.otherActivityClass = webtoapp.class;
                 Intent intent = new Intent(MainActivity.this,DemoSplash.class);
                 startActivity(intent);
@@ -138,8 +139,6 @@ public class MainActivity extends AppCompatActivity {
         DemoSplash.otherActivityClass = webtoapp.class;
         Intent intent = new Intent(MainActivity.this,DemoSplash.class);
         startActivity(intent);
-/*        Intent intent = new Intent(MainActivity.this,webtoapp.class);
-        startActivity(intent);*/
 
     }
 
