@@ -6,16 +6,22 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.TextView;
 
 public class DemoSplash extends AppCompatActivity {
     public static  Class<? extends Activity> otherActivityClass = MainActivity.class;
+
+    public static String userWebLINK = "";
+
+    TextView userText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo_splash);
+        userText = findViewById(R.id.userText);
 
-
+        userText.setText(userWebLINK);
         // Create a delay to show the splash screen for a specific duration
         new Handler().postDelayed(new Runnable() {
             @Override

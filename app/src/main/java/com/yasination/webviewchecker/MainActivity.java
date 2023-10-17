@@ -118,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
                     validURL =  userLink.split("www.")[1];
                 }else validURL = userLink;
 
+                DemoSplash.userWebLINK = validURL;
+
 
                 webtoapp.webURL = "https://www."+validURL;
 
