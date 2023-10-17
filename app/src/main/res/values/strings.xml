@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">webview checker</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="instruction">আপনার ওয়েবসাইট অ্যাপে কেমন দেখাবে?</string>
+    <string name="instruction2">নিচে আপনার WebsiteLink লিখে See Demo বাটনে ক্লিক করুন।</string>
+    <string name="instruction3">Enter Website Link &amp; Click <b>See Demo</b></string>
+</resources>

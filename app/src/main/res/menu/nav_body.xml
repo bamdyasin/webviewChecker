@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <group
+        android:id="@+id/navGroup">
+
+        <item
+            android:id="@+id/home"
+            android:title="HOME"
+            android:icon="@drawable/baseline_home_24"
+            android:checkable="true"
+            />
+    </group>
+    <item
+        android:id="@+id/ecommerce2"
+        android:title="Demo e-Commerce 1"
+        android:icon="@drawable/baseline_add_business_24"
+        android:checkable="true"
+
+        />
+
+    <item
+        android:id="@+id/ecommerce"
+        android:title="Demo e-Commerce 2"
+        android:icon="@drawable/baseline_add_business_24"
+        android:checkable="true"
+
+        />
+
+
+    <item
+        android:id="@+id/blogger"
+        android:title="Demo Blogger "
+        android:icon="@drawable/baseline_text_snippet_24"
+        android:checkable="true"
+        />
+
+    <item
+        android:id="@+id/travel"
+        android:title="Demo Traver Agency "
+        android:icon="@drawable/baseline_mode_of_travel_24"
+        android:checkable="true"
+        />
+
+
+
+
+</menu>
