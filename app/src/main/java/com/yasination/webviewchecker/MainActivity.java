@@ -8,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -61,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
 
                 }
-                else if (item.getItemId()== R.id.price){
-                    Toast.makeText(MainActivity.this, "See Our App Price", Toast.LENGTH_SHORT).show();
+                else if (item.getItemId()== R.id.buyApp){
+                    openWhatsAppUser();
                     drawerLayout.closeDrawer(GravityCompat.START);
 
                 }
@@ -126,6 +127,27 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this,DemoSplash.class);
         startActivity(intent);
 
+    }
+
+
+    //============================Open WhatsApp user Link=======================
+    public void openWhatsAppUser() {
+        // Replace "1234567890" with the phone number or contact you want to open
+        String phoneNumber = "+8801868966864";
+
+        // Create a WhatsApp URL using the "https://wa.me" URL scheme
+        String url = "https://wa.me/" + phoneNumber;
+
+        // Create an Intent to open the URL
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+
+        // Check if there's an app that can handle this intent
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            // WhatsApp is not installed, you can handle this situation here
+            Toast.makeText(this, "WhatsApp is not installed.", Toast.LENGTH_SHORT).show();
+        }
     }
 
 

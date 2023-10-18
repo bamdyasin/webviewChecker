@@ -16,7 +16,7 @@
     <group
         android:id="@+id/navPriceGroup">
     <item
-        android:id="@+id/price"
+        android:id="@+id/buyApp"
         android:title="Buy Apps"
         android:icon="@drawable/baseline_sell_24"
         android:checkable="true"
