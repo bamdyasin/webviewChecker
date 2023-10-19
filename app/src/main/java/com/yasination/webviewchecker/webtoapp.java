@@ -54,6 +54,8 @@ public class webtoapp extends Activity {
         @Override
         public void onPageFinished(WebView view, String url) {
             progressBar.setVisibility(View.GONE); // or View.INVISIBLE
+
+
         }
     }
 

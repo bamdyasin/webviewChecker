@@ -13,10 +13,10 @@
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="155dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/yasin"
+        android:src="@drawable/splashlogo"
         android:contentDescription="@string/user_splash_logo" />
 
     <TextView
