@@ -24,16 +24,9 @@
         />
     </group>
 
-    <item
-        android:id="@+id/rateUs"
-        android:title="Rate Us"
-        android:icon="@drawable/baseline_star_rate_24"
-        android:checkable="true"
-
-        />
 
     <item
-        android:id="@+id/share"
+        android:id="@+id/shareAppButton"
         android:title="Share App"
         android:icon="@drawable/baseline_share_24"
         android:checkable="true"
@@ -47,6 +40,15 @@
         android:checkable="true"
 
         />
+
+    <item
+        android:id="@+id/rateUsButton"
+        android:title="Rate on Google Play"
+        android:icon="@drawable/baseline_star_rate_24"
+        android:checkable="true"
+
+        />
+
 
 
 

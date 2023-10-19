@@ -67,6 +67,16 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
 
                 }
+                else if (item.getItemId()== R.id.rateUsButton){
+                    openGooglePlayForRating();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+
+                }
+                else if (item.getItemId()== R.id.shareAppButton){
+                    shareApp();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+
+                }
                 return true;
             }
         });   //================= ===Right Side navigationView END ====== =====================
@@ -150,6 +160,40 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //===================Rate us on google play======================
+    public void openGooglePlayForRating( ) {
+        // Replace "your.package.name" with your app's package name
+        String appPackageName = getPackageName();
+
+        try {
+            // Open the Google Play Store with your app's page
+            Uri uri = Uri.parse("market://details?id=" + appPackageName);
+            Intent rateIntent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(rateIntent);
+        } catch (android.content.ActivityNotFoundException e) {
+            // If Google Play Store app is not installed, open the Play Store in a web browser
+            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName);
+            Intent rateIntent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(rateIntent);
+        }
+    }
+
+    //========================Share this app====================
+    public void shareApp() {
+        // Create an intent to share text
+        Intent shareIntent = new Intent();
+        shareIntent.setAction(Intent.ACTION_SEND);
+
+        // Set the message you want to share, like a link to your app
+        String appLink = "Check out my awesome app: https://play.google.com/store/apps/details?id="+getPackageName();
+        shareIntent.putExtra(Intent.EXTRA_TEXT, appLink);
+
+        // Define the MIME type
+        shareIntent.setType("text/plain");
+
+        // Start the chooser to select an app for sharing
+        startActivity(Intent.createChooser(shareIntent, "Share This App via"));
+    }
 
 
 }//==========================================
