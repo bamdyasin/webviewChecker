@@ -13,7 +13,7 @@
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="match_parent"
-        android:layout_height="155dp"
+        android:layout_height="160dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:src="@drawable/splashlogo"
@@ -22,17 +22,16 @@
     <TextView
         android:id="@+id/userText"
         android:layout_width="match_parent"
-        android:layout_height="48sp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/imgLogo"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:background="#3F51B5"
+        android:background="@drawable/bottom_curved"
         android:gravity="center"
         android:text="@string/app_name"
-        android:textColor="#FFEB3B"
+        android:textColor="#001049"
         android:textSize="26sp"
-        android:textStyle="bold"
-        tools:ignore="TextSizeCheck" />
+        android:textStyle="bold"/>
 
 </RelativeLayout>
