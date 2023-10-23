@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:openDrawer="start"
+    android:background="#CDBFE6"
     tools:context=".MainActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -29,6 +30,7 @@
                 app:navigationIcon="@drawable/baseline_menu_24"
                 app:navigationIconTint="@color/white"
                 app:menu="@menu/toolbar_items"
+
                 />
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -42,14 +44,39 @@
 
             >
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:id="@+id/adLayout"
+                android:gravity="bottom"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+
+                >
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    ads:adSize="SMART_BANNER"
+                    ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+                </com.google.android.gms.ads.AdView>
+
+            </LinearLayout>
+
+
 
             <LinearLayout
+                android:id="@+id/dashBoard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center"
+                android:layout_above="@id/adLayout"
                 android:background="#CDBFE6"
                 >
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -75,17 +102,14 @@
 
                 <EditText
                     android:id="@+id/edEnterLink"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
-                    android:gravity="center"
-                    android:hint="Enter Website Link"
+                    android:hint="Enter Website Link   "
                     android:minHeight="48dp"
                     android:maxLines="1"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:focusable="true"
-                    />
+                    android:textStyle="bold"   />
 
 
 

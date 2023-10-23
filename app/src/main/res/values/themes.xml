@@ -7,3 +7,14 @@
 
     <style name="Theme.WebviewChecker" parent="Base.Theme.WebviewChecker" />
 </resources>
+
+
+
+
+<!--
+
+<style name="Base.Theme.WebviewChecker" parent="Theme.Material3.DayNight.NoActionBar">
+
+-->
+
+

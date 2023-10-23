@@ -1,9 +1,18 @@
 <resources>
-    <string name="app_name">webview checker</string>
+    <string name="app_name">WebView Checker</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="instruction">আপনার ওয়েবসাইট অ্যাপে কেমন দেখাবে?</string>
     <string name="instruction2">নিচে আপনার WebsiteLink লিখে See Demo বাটনে ক্লিক করুন।</string>
     <string name="instruction3">Enter Website Link &amp; Click <b>See Demo</b></string>
     <string name="user_splash_logo">User Splash Logo</string>
+    <string name="buyClassTitle">Packages</string>
+    <string name="price">Price Tk<strike>1500</strike> Tk 300.oo</string>
+    <string name="basinPrice">Regular Price: $<strike>14.99 </strike></string>
+    <string name="standardPrice">Regular Price: $<strike>49.99 </strike></string>
+    <string name="premiumPrice">Regular Price: $<strike>119.99 </strike></string>
+
+    <string name="basicPacDes">Description: a simple app to display your website or web application within an Android App</string>
+    <string name="standardPacDes">Description: This package is ideal to display your website or web application within an Android app and earning opportunity to from Google AdMob ADs.</string>
+    <string name="premiumPacDes">Description: This package is ideal for Scaling your Business Pushing Notification and In-App Messaging within an Android app </string>
 </resources>

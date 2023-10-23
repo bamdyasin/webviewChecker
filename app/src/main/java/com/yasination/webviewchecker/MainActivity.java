@@ -16,11 +16,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,11 +38,44 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     EditText edEnterLink;
     Button btnDemo;
-
+     AdView mAdView;
+    InterstitialAd mInterstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest bannerAdRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(bannerAdRequest);
+
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        // Handle the error
+                        mInterstitialAd = null;
+                    }
+                });
+
 
         drawerLayout = findViewById(R.id.drawerLayout);
         materialToolbar = findViewById(R.id.materialToolbar);
@@ -41,9 +83,11 @@ public class MainActivity extends AppCompatActivity {
         edEnterLink = findViewById(R.id.edEnterLink);
         btnDemo = findViewById(R.id.btnDemo);
 
+
         //================================drawer bridge create================================
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this,drawerLayout,materialToolbar,R.string.drawer_open ,R.string.drawer_close);
         drawerLayout.addDrawerListener(toggle);
+
 
         btnDemo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +107,17 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if (item.getItemId()== R.id.buyApp){
-                    openWhatsAppUser();
+
+                    if (mInterstitialAd != null) {
+                        mInterstitialAd.show(MainActivity.this);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Poor Network", Toast.LENGTH_SHORT).show();
+                    }
+
+                    Intent intent = new Intent(MainActivity.this,BuyApp.class);
+                    startActivity(intent);
+
+                  //  openWhatsAppUser();
                     drawerLayout.closeDrawer(GravityCompat.START);
 
                 }
