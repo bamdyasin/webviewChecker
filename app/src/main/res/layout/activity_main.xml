@@ -102,14 +102,15 @@
 
                 <EditText
                     android:id="@+id/edEnterLink"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:hint="Enter Website Link   "
-                    android:minHeight="48dp"
                     android:maxLines="1"
+                    android:minHeight="48dp"
+                    android:gravity="center"
                     android:textSize="18sp"
-                    android:textStyle="bold"   />
+                    android:textStyle="bold" />
 
 
 
@@ -118,6 +119,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See Demo"
+                    android:background="@drawable/buttonmain"
                     android:textStyle="bold"
                     />
 
